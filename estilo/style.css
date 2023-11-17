@@ -1,0 +1,460 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Oxygen&family=Oxygen+Mono&family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root {
+    --cor0: #ebded2;
+    --cor1: #FF7F24;
+    --cor2: #DB6D1F;
+    --cor3: #B35919;
+    --cor4: #8A4513;
+    --cor5: #61300E;
+    --font-título1: 'Inconsolata', monospace;
+    --font-título2: 'Oxygen';
+    --font-título3: 'Oxygen Mono';
+    --font-padrão:'Roboto Condensed', sans-serif;
+   
+}
+
+*{
+    margin: 0px;
+}
+
+
+body {
+    font-family: var(--font-padrão);
+    color: var(--cor4);
+    background-color: var(--cor2);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0.5px;
+}
+
+header  h1 {
+    font-family: var(--font-título1);
+    color: var(--cor0);
+    font-size: 3em;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.493);
+    margin-bottom: 20px;
+}
+
+header > p {
+    color: var(--cor0);
+    font-size: 1.2em;
+    line-height: 1.8em;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.507);
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 20px 20px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.322);
+}
+
+nav a {
+    font-weight: bold;
+    color: var(--cor2);
+    padding: 10px;
+    border-radius: 30px;
+    margin-left: 10px;
+    text-decoration: none;
+    background-color: var(--cor0);
+    transition-duration: 0.3s;
+}
+
+nav a:hover {
+    font-size: 1.2em;
+    background-color: var(--cor3);
+    color: var(--cor5);
+    padding: 15px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.473);
+    border: 1px solid var(--cor5);
+}
+
+main {
+    background-color: var(--cor0);
+    max-width: 1000px;
+    min-width: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.404);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+main h1 {
+    position: relative;
+    font-family: var(--font-título2);
+    color: var(--cor5);
+    background-image: linear-gradient(to left, var(--cor1)1%, transparent);
+    text-shadow: 1px 1px 0px var(--cor5);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.411);
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+main h2 {
+    font-family: var(--font-título3);
+    color: var(--cor4);
+    background-image: linear-gradient(to left, var(--cor1)1%, transparent);
+    padding-left: 30px;
+    text-shadow: 1px 1px 0px var(--cor5);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.411);
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+main h2.Destaque {
+    text-shadow: 1px 1px 0px var(--cor5);
+    background-image: linear-gradient(to right, var(--cor0), var(--cor0), var(--cor4));
+    width: 80vw;
+    display: flexbox;
+    max-width: 400px;
+   
+}
+
+main h3 {
+    font-family: var(--font-título3);
+    color: var(--cor0);
+    font-size: 1.35em;
+    margin-right: -10px;
+    margin-left: -10px;
+    padding-left: 20px;
+}
+
+main p {
+    font-family: var(--font-padrão);
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+    font-size: 1.05em;
+}
+
+main  p strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main  aside strong {
+    color: var(--cor0);
+    font-weight: bold;
+}
+
+main  p > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-image: linear-gradient(to left, var(--cor1), transparent);
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+
+main  p > a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+    background-image: linear-gradient(to left, var(--cor2), transparent);
+}
+
+main aside  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-image: linear-gradient(to left, var(--cor3), transparent);
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+main aside a:hover {
+    text-decoration: underline;
+    color: var(--cor0);
+    background-image: linear-gradient(to left, var(--cor2), transparent);
+}
+
+main a.externo::after {
+    content: '\00A0\1f517';
+}
+
+main img.full {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    border-radius: 30px;
+}
+
+
+
+div.video {
+    position: relative;
+    background-color: var(--cor4);
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 15px;
+    padding-bottom: 57.5%;
+    }
+    
+    div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    } 
+    
+
+aside{
+    background-color: var(--cor4);
+    color: var(--cor0);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: solid 2px var(--cor3);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.281);
+}
+
+aside > h3 {
+    background-color: var(--cor2);
+    color: var(--cor0);
+    padding: 10px 10px 10px 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px ;
+    border-bottom: solid 2px var(--cor3);
+}
+
+ul {
+    margin-left: -40px;
+    color: var(--cor2);
+    list-style-type: '\1F36B\0020\0020';
+    columns: 2;
+    list-style-position: inside;
+    font-size: 2em; 
+}
+
+
+
+ul span {
+    color: var(--cor0);
+    font-size: 0.6em;
+}
+
+footer { 
+    background-color: var(--cor5);
+    color: var(--cor0);
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+    line-height: 1.5em;
+}
+
+footer a {
+    color: var(--cor0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: var(--cor1);
+    text-decoration: underline;
+}
+/* Adicione o seguinte estilo para a seção parallax */
+.parallax-section {
+    height: 400px; /* Ajuste a altura conforme necessário */
+    background-image: url('../imagens/delicioso-chocolate-v.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.parallax-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Ajuste a cor do texto conforme necessário */
+}
+
+#soundControl {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: var(--cor2);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20%;
+    outline: none;
+    transition: 0.3s;
+    z-index: 201;
+}
+
+#soundControl:hover {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: var(--cor3);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25%;
+    outline: none;
+    border-color: var(--cor3);
+    z-index: 201;
+}
+
+img.fantastico {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    width: 10vw;
+    animation: fantastico 5s linear  alternate;
+    transform-origin: center; /* Define o ponto de origem da transformação no centro */
+}
+
+img.fantastico2 {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    width: 10vw;
+    animation: fantastico2 9s linear  alternate;
+    transform-origin: center; /* Define o ponto de origem da transformação no centro */
+    opacity: 0;
+}
+
+@keyframes fantastico {
+    0% {
+        transform: rotate(0deg) scale(1) ;
+    }
+    25% {
+        transform: rotate(90deg) scale(1.5);
+    }
+    50% {
+        transform: rotate(180deg) scale(2);
+    }
+    75% {
+        transform: rotate(270deg) scale(1.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes fantastico2 {
+    0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 0.1; /* Opacidade inicial (redundante, mas mantido para clareza) */
+    }
+    10% {
+        transform: rotate(90deg) scale(1.5);
+        opacity: 0.3; /* Opacidade durante a rotação */
+    }
+    20% {
+        transform: rotate(180deg) scale(2);
+        opacity: 0.5; /* Opacidade durante a rotação */
+    }
+    30% {
+        transform: rotate(270deg) scale(1.5);
+        opacity: 0.7; /* Opacidade durante a rotação */
+    }
+    40% {
+        transform: rotate(360deg) scale(1);
+        opacity: 0.9; /* Opacidade final (redundante, mas mantido para clareza) */
+    }
+    50% {
+        transform: rotate(360deg) scale(1);
+        opacity: 0.8; /* Opacidade final (redundante, mas mantido para clareza) */
+    }
+    60% {
+        transform: rotate(360deg) scale(1);
+        opacity: 0.6; /* Opacidade final (redundante, mas mantido para clareza) */
+    }
+    70% {
+        transform: rotate(360deg) scale(1);
+        opacity: 0.4; /* Opacidade final (redundante, mas mantido para clareza) */
+    }
+    80% {
+        transform: rotate(360deg) scale(1);
+        opacity: 0.2; /* Opacidade final (redundante, mas mantido para clareza) */
+    }
+    90% {
+        transform: rotate(360deg) scale(1);
+        opacity: 0.0; /* Opacidade final (redundante, mas mantido para clareza) */
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        opacity: 0; /* Opacidade final (redundante, mas mantido para clareza) */
+    }
+}
+
+body {
+    margin: 0;
+}
+
+.moto-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    top: 20vh;
+    left: 20px;
+}
+
+.moto-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: moveMoto 10s linear forwards;
+    border-radius: 60px;
+    display: block;
+}
+
+@keyframes moveMoto {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        top: 50px;
+        display: block;
+    }
+    25% {
+        transform: translate(25%, 25%) scale(0.7);
+        top: 100px;
+        display: block;
+    }
+    50% {
+        transform: translate(75%, 75%) scale(0.9);
+        top: 120px;
+        display: block;
+    }
+    75% {
+        transform: translate(25%, 25%) scale(0.7);
+        top: 200px;
+        display: block;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.5);
+        top: 400x;
+        display: none;
+        opacity: 0;
+    }
+}

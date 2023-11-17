@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Som</title>
+    <style>
+        #soundControl {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="video">
+    <iframe
+        id="youtube-video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ZZSch-BenBI?autoplay=1&mute=1&enablejsapi=1&controls=0&loop=1&playlist=ZZSch-BenBI"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+    ></iframe>
+</div>
+
+<!-- Botão de controle de som -->
+<button id="soundControl">Som: Desligado</button>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('youtube-video', {
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        // Adiciona um ouvinte ao botão de controle de som
+        document.getElementById('soundControl').addEventListener('click', function () {
+            toggleSound();
+        });
+    }
+
+    function toggleSound() {
+        if (player.isMuted()) {
+            player.unMute();
+            document.getElementById('soundControl').innerText = 'Som: Ligado';
+        } else {
+            player.mute();
+            document.getElementById('soundControl').innerText = 'Som: Desligado';
+        }
+    }
+</script>
+
+</body>
+</html>
