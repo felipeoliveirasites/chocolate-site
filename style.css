@@ -1,0 +1,74 @@
+:root {
+    --cor0: #ebded2;
+    --cor1: #FF7F24;
+    --cor2: #DB6D1F;
+    --cor3: #B35919;
+    --cor4: #8A4513;
+    --cor5: #61300E;
+    --font-título1: 'Inconsolata', monospace;
+    --font-título2: 'Oxygen';
+    --font-título3: 'Oxygen Mono';
+    --font-padrão:'Roboto Condensed', sans-serif;
+   
+}
+
+div.video {
+    /* Posição: */
+    position: fixed; /* Manterá o vídeo fixo na tela */
+    top: 20px; /* Distância do topo da tela */
+    left: 50%; /* Centralizado horizontalmente */
+    transform: translateX(-50%); /* Centralizar considerando margens */
+  
+    /* Estilo: */
+    background-color: transparent; /* Cor de fundo */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  
+    /* Proporção do iframe: */
+    width: 75%; /* Largura como porcentagem da viewport */
+    height: 0; /* Altura inicial definida como 0 */
+    padding-bottom: 56.25%; /* Proporção 16:9 para o iframe do YouTube */ /* Ajuste baseado na altura desejada */
+  
+    /* Responsividade: */
+    @media (max-width: 768px) {
+      width: 90%; /* Ajusta a largura em telas menores */
+    }
+  }
+    
+    div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    } 
+    
+    #soundControl {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        background-color: var(--cor2);
+        color: #fff;
+        cursor: pointer;
+        border-radius: 20%;
+        outline: none;
+        transition: 0.3s;
+        z-index: 201;
+    }
+    
+    #soundControl:hover {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        background-color: var(--cor3);
+        color: #fff;
+        cursor: pointer;
+        border-radius: 25%;
+        outline: none;
+        border-color: var(--cor3);
+        z-index: 201;
+    }
+    

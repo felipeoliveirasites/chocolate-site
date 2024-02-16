@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="soundControl">Som: Desligado</button>
+<div class="video">
+                <iframe
+                    id="youtube-video"
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/ZZSch-BenBI?autoplay=1&mute=1&enablejsapi=1&controls=0&loop=1&playlist=ZZSch-BenBI"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                ></iframe>
+                <div style="position: absolute;top: 0;width: 100%;height: 70px;background-color: transparent;z-index: 101;left: 0;"></div>
+                <div style="position: absolute;bottom: 0px;width: 100%;height: 820px;background-color: transparent;z-index: 101;left: 0;"></div>
+            </div>
+                <!-- Inclua a API JavaScript do YouTube -->
+                <script src="https://www.youtube.com/iframe_api"></script>
+                <script>
+                    var player;
+                
+                    function onYouTubeIframeAPIReady() {
+                        player = new YT.Player('youtube-video', {
+                            events: {
+                                'onReady': onPlayerReady
+                            }
+                        });
+                    }
+                
+                    function onPlayerReady(event) {
+                        // Adiciona um ouvinte ao botão de controle de som
+                        document.getElementById('soundControl').addEventListener('click', function () {
+                            toggleSound();
+                        });
+                    }
+                
+                    function toggleSound() {
+                        if (player.isMuted()) {
+                            player.unMute();
+                            document.getElementById('soundControl').innerText = 'Som: Ligado';
+                            document.getElementById('soundControl').style.background = "var(--cor1)"
+                            document.getElementById('body').style.background = "var(--cor1)"
+                            document.querySelector('img#fantastico').style.display = "inline" 
+                            document.querySelector('img#fantastico2').style.display = "none"
+                        } else {
+                            player.mute();
+                            document.getElementById('soundControl').innerText = 'Som: Desligado';
+                            document.getElementById('soundControl').style.background = "var(--cor2)"
+                            document.getElementById('body').style.background = "var(--cor2)"
+                            document.querySelector('img#fantastico').style.display = "none" 
+                            document.querySelector('img#fantastico2').style.display = "inline"
+                        }
+                    }
+                </script>
+            </div>
+          
+</body>
+</html>
